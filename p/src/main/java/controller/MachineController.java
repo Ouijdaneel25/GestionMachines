@@ -4,7 +4,6 @@ import beans.Machine;
 import beans.Marque;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Date;
 import java.util.List;
 
