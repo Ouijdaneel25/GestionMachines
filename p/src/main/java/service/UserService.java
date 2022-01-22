@@ -6,9 +6,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.servlet.http.HttpSession;
-
-import beans.Marque;
 import beans.User;
 import connexion.Connexion;
 import dao.IDao;
@@ -36,7 +33,7 @@ public class UserService implements IDao<User> {
 	public boolean login(String username, String password) {
 
 		try {
-			String sql = "select id,name,username,password from users where username  = ? and password= ?";
+			String sql = "select id,username,password from users where username  = ? and password= ?";
 			PreparedStatement ps = Connexion.getInstane().getConnection().prepareStatement(sql);
 			ps.setString(1, username);
 			ps.setString(2, password);
